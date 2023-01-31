@@ -6,9 +6,27 @@
 </head>
 
 <body>
-  <a href="http://jquery.com/">jQuery</a>
+  <div id="widget">
+    <button id="plus">+</button>
+    <div id="result">1</div>
+    <button id="minus">-</button>
+
+
+  </div>
+
   <script src="jquery.js"></script>
-  <script></script>
+  <script>
+    (function ($) {
+      $(function () {
+
+        $('#widget').on('click', '#plus', function () {
+          $('#result').text();
+        });
+
+      });
+    })(jQuery)
+
+  </script>
 </body>
 
 </html>
