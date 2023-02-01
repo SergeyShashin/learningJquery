@@ -10,8 +10,6 @@
     <button id="plus">+</button>
     <div id="result">1</div>
     <button id="minus">-</button>
-
-
   </div>
 
   <script src="jquery.js"></script>
@@ -19,9 +17,20 @@
     (function ($) {
       $(function () {
 
-        $('#widget').on('click', '#plus', function () {
-          $('#result').text();
+        var counter = 0;
+
+        $('#widget').on('click', 'button', function () {
+
+          if (this.id === 'plus') {
+            counter++;
+          }
+          if (this.id === 'minus') {
+            counter--;
+          }
+
+          $('#result').text(counter);
         });
+
 
       });
     })(jQuery)
