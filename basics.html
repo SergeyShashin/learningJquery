@@ -14,10 +14,12 @@
 
   <script src="jquery.js"></script>
   <script>
+
     (function ($) {
       $(function () {
 
         var counter = 0;
+        var resultEl = $('#result');
 
         $('#widget').on('click', 'button', function () {
 
@@ -28,7 +30,16 @@
             counter--;
           }
 
-          $('#result').text(counter);
+          if (counter >= 0) {
+            resultEl.css({
+              'color': 'green',
+
+            });
+          } else {
+            resultEl.css('color', 'red');
+          }
+
+          resultEl.text(counter);
         });
 
 
