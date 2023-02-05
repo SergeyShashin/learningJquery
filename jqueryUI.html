@@ -14,9 +14,13 @@
   <!-- Accordion -->
   <h2 class="demoHeaders">Accordion</h2>
   <div id="accordion">
-    <h3>First</h3>
+    <h3 class="icons">First</h3>
     <div>
-      <p> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      <p>
+        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
       </p>
     </div>
     <h3>Second</h3>
@@ -42,8 +46,16 @@
     function makeAccordion(element) {
       (function (jQuery) {
         $(function () {
-          console.log($('#accordion'));
-          $('#accordion').accordion();
+          var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+          }
+
+          $('#accordion').accordion({
+            collapsible: true,
+            icons: icons,
+            heightStyle: "fill",
+          })
         });
 
       })(jQuery)
