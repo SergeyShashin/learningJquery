@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="jquery-ui-1.13.2\jquery-ui.css">
+  <title>Jquery-UI</title>
+</head>
+
+<body>
+
+  <!-- Accordion -->
+  <h2 class="demoHeaders">Accordion</h2>
+  <div id="accordion">
+    <h3>First</h3>
+    <div>
+      <p> Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+    <h3>Second</h3>
+    <div>
+      <p> Phasellus mattis tincidunt nibh.</p>
+    </div>
+    <h3>Third</h3>
+    <div>
+      <p>
+        Nam dui erat, auctor a, dignissim quis.
+      </p>
+    </div>
+  </div>
+
+
+  <script src="jquery.js"></script>
+  <script src="jquery-ui-1.13.2\jquery-ui.js"></script>
+  <script>
+
+    makeAccordion(document.getElementById('accordion'));
+
+
+    function makeAccordion(element) {
+      (function (jQuery) {
+        $(function () {
+          console.log($('#accordion'));
+          $('#accordion').accordion();
+        });
+
+      })(jQuery)
+    }
+  </script>
+</body>
+
+</html>
