@@ -46,6 +46,12 @@
   </div>
   </script>
 
+  <br>
+  <hr>
+  <br>
+
+  <div id="draggable" style="width: 100px; height: 50px; background: green;"></div>
+  <div id="droppable"  style="width: 300px; height: 300px; background: lightseagreen;"></div>
 
   <script src="jquery.js"></script>
   <script src="jquery-ui-1.13.2\jquery-ui.js"></script>
@@ -105,6 +111,11 @@
         source: availableTags
       });
     });
+  </script>
+
+  <script>
+    $('#draggable').draggable();
+    $('#droppable').droppable();
   </script>
 
 
